@@ -10,11 +10,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -54,12 +55,9 @@ fun Greeting(modifier: Modifier = Modifier) {
             .background(Color(0xFFD2E8D4))
     ) {
         Column {
-            Row(
-//                modifier = Modifier.weight(1f)
-            ) {
+            Row {
                 WidgetOne()
             }
-//            Spacer(modifier = Modifier.weight(0.5f))
             Row {
                 WidgetTwo()
             }
@@ -105,14 +103,14 @@ fun WidgetOne() {
 fun WidgetTwo() {
     Column {
         Row{
-
-//            Icon(
-//                painter = painterResource(R.drawable.ic_phone),
-//                contentDescription = "Phone"
-//            )
+            Icon(
+                imageVector = Icons.Filled.Phone,
+                contentDescription = null,
+                tint = Color(0xFF006400)
+            )
 
             Text(
-                text = "+30 6940980056"
+                text = "+30 694 098 0056"
             )
         }
         Row{}
