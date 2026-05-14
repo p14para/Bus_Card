@@ -88,7 +88,7 @@ fun WidgetOne() {
         }
         Row {
             Text(
-                text = "Android Developer Extraordinary",
+                text = "Android Developer Extraordinaire",
                 color = Color(0xFF006400),
                 fontWeight = FontWeight.Bold
             )
