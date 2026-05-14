@@ -20,6 +20,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -68,7 +70,7 @@ fun WidgetOne() {
         verticalArrangement = Arrangement.Center
     ){
         Row(
-            modifier = Modifier.background(Color(0xFF2C2C2C))
+            modifier = Modifier.background(Color(0xFF4A4A4A))
         ) {
             Image(
                 painter = painterResource(id = R.drawable.android_logo),
@@ -79,8 +81,8 @@ fun WidgetOne() {
         Row {
             Text(
                 text = "Thomas Paravaitsis",
-                color = Color(0xFF2C2C2C),
-                fontSize = 30.sp,
+                color = Color(0xFF4A4A4A),
+                fontSize = 35.sp,
                 modifier = Modifier.padding(16.dp)
             )
         }
