@@ -6,19 +6,23 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.businescard.ui.theme.BusinesCardTheme
 
@@ -58,18 +62,26 @@ fun Greeting(modifier: Modifier = Modifier) {
 
 @Composable
 fun WidgetOne() {
-    Column {
-        Row {
+    Column (
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ){
+        Row(
+            modifier = Modifier.background(Color(0xFF2C2C2C))
+        ) {
             Image(
                 painter = painterResource(id = R.drawable.android_logo),
-                contentDescription = null
+                contentDescription = null,
+                modifier = Modifier.size(100.dp)
             )
         }
         Row {
             Text(
                 text = "Thomas Paravaitsis",
-                color = Color.Black,
-                fontSize = 30.sp
+                color = Color(0xFF2C2C2C),
+                fontSize = 30.sp,
+                modifier = Modifier.padding(16.dp)
             )
         }
         Row {
