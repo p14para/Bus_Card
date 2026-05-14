@@ -15,7 +15,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.Place
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -101,8 +103,14 @@ fun WidgetOne() {
 
 @Composable
 fun WidgetTwo() {
-    Column {
-        Row{
+    Column (
+        modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ){
+        Row(
+            modifier = Modifier.padding(2.dp)
+        ){
             Icon(
                 imageVector = Icons.Filled.Phone,
                 contentDescription = null,
@@ -113,8 +121,32 @@ fun WidgetTwo() {
                 text = "+30 694 098 0056"
             )
         }
-        Row{}
-        Row{}
+        Row (
+            modifier = Modifier.padding(2.dp)
+        ){
+            Icon(
+                imageVector = Icons.Filled.Email,
+                contentDescription = null,
+                tint = Color(0xFF006400)
+            )
+
+            Text(
+                text = "thomaspara96@gmail.com"
+            )
+        }
+        Row(
+            modifier = Modifier.padding(2.dp)
+        ){
+            Icon(
+                imageVector = Icons.Filled.Place,
+                contentDescription = null,
+                tint = Color(0xFF006400)
+            )
+
+            Text(
+                text = "Athens, Greece"
+            )
+        }
     }
 }
 
